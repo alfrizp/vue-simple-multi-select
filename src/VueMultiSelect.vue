@@ -101,7 +101,7 @@ export default {
   },
   data() {
     return {
-      selectedOptions: [],
+      selectedOptions: this.value,
       searchText: null,
       selectedOption: null,
       dropdownOpen: false,
@@ -110,7 +110,8 @@ export default {
   },
   props: {
     value: {
-      required: true
+      required: true,
+      default: () => [],
     },
     // Use classes to override the look and feel
     // Provide these 7 classes.
